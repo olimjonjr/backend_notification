@@ -38,6 +38,7 @@ def receive_command():
 
 def start():
     t_msg = threading.Thread(target=receive_command)
+    t_msg.daemon = True
     t_msg.start()
     t_msg.join(0)
     #self.receive_command()
