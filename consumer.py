@@ -16,7 +16,6 @@ def callback(ch, method, properties, body):
 
 
 def receive_command():
-    print("ENTERED")
     connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
     channel = connection.channel()
     
@@ -34,6 +33,7 @@ def receive_command():
     channel.basic_consume(queue=queue_name, on_message_callback=callback, auto_ack=True)
 
     channel.start_consuming()
+    
 
 
 def start():

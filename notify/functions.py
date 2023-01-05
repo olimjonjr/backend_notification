@@ -4,7 +4,6 @@ from notify.FCMManager import send_push
 from notify.api_exception import exceptions_error
 
 
-
 def to_one_user(profile, senderId, message, notificationType):
 
     if profile:
@@ -33,7 +32,6 @@ def to_one_user(profile, senderId, message, notificationType):
         return exceptions_error("Item not found", 404)
 
 def to_all_users(profiles, senderId, message, notificationType):
-
 
     for profile in profiles:
 

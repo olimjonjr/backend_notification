@@ -3,11 +3,7 @@ from firebase_admin import messaging, credentials
 from config import cred
 
 
-
-
-# cred = credentials.Certificate("/home/olimjon/zeromax/backend-notifications/serviceAccountKey.json")
 firebase_admin.initialize_app(cred)
-
 
 
 def send_push(title, msg, registrationToken):

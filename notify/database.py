@@ -14,6 +14,11 @@ class UserToken(db.Model):
     token = db.Column(db.Text())
 
 
+    def __init__(self, userId, token):
+        self.token = token
+        self.userId = userId
+
+
 class NotificationTypes(Enum):
 
     SPECIFIC = "Specific"
